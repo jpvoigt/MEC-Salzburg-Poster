@@ -40,11 +40,11 @@
 	eyecatcher=true,
 	headerborder=closed,
 	headerheight=0.1\textheight,
-    textfont=\sc, % An example of changing the text font
+    % textfont=\sc, % An example of changing the text font
 	headershape=rounded,
 	headershade=shadetb,
-    headerfont=\Large\bf\textsc, %Sans Serif
-    textfont={\setlength{\parindent}{1.5em}},
+    % headerfont=\Large\bf\textsc, %Sans Serif
+    % textfont={\setlength{\parindent}{1.5em}},
 	boxshade=plain,
 %   background=shade-tb,
 	background=plain,
@@ -74,11 +74,15 @@
 	Excerpts from Hermann Keller's composition for speaking cellist\\
 	"Ihr sollt die Wahrheit erben"
 	
-    %\includegraphics[width=.5\textwidth]{wahrheit1}
-    \includegraphics[width=\textwidth]{wahrheit2}
+    \includegraphics[width=.5\textwidth]{wahrheit1}
+    \includegraphics[width=.5\textwidth]{wahrheit2}
 	    
 	{\scriptsize © 2019 Edition Juliane Klein, Berlin $\bullet$
 	\emph{The excerpts are reproduced with the kind permission of the publisher.}}
     }
+  \headerbox{}{column=0,span=5,below=keller}{
+  	\includegraphics[width=\textwidth]{salzburg-poster.pdf}
+  }
+
 \end{poster}
 \end{document}
