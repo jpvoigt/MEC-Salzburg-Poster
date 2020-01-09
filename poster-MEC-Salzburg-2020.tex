@@ -40,28 +40,34 @@
 	eyecatcher=true,
 	headerborder=closed,
 	headerheight=0.1\textheight,
-%  textfont=\sc, An example of changing the text font
+    textfont=\sc, % An example of changing the text font
 	headershape=rounded,
 	headershade=shadetb,
-%headerfont=\Large\bf\textsc, %Sans Serif
-%textfont={\setlength{\parindent}{1.5em}},
+    headerfont=\Large\bf\textsc, %Sans Serif
+    textfont={\setlength{\parindent}{1.5em}},
 	boxshade=plain,
-%  background=shade-tb,
+%   background=shade-tb,
 	background=plain,
 	linewidth=2pt
 	}
+% eyecatcher
   {
   	\includegraphics[width=0.14\linewidth]{double-lily-modified3.png}
   }
+% title
   {Lilypond}
+% author
   {Jan-Peter Voigt}
+% university
   {\includegraphics[width=.14\textwidth]{double-lily-modified3.png}}
-  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Content
+
   \headerbox{Lilypond Usage}{name=lily1,column=0,span=2}{
-  	
   }
-  \headerbox{Johann Sebastian Bach}{name=marco,column=1,span=2,below=lily1}{
-  	The St.Mark Passion by Johann Sebastian Bach
+  \headerbox{Classical Music}{name=marco,column=1,span=2,below=lily1}{
+  	St.Mark Passion, Johann Sebastian Bach
+  	
   }
   
   \headerbox{Contempory Music}{name=keller,column=3,span=2}{
