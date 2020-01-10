@@ -3,7 +3,7 @@
 
 \usepackage[EU1]{fontenc}
 \usepackage{fontspec}
-\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{Ligatures=TeX}
 \setromanfont{TeX Gyre Schola}
 \setsansfont{TeX Gyre Adventor}
 \setmonofont{TeX Gyre Cursor}
@@ -52,36 +52,47 @@
 	}
 % eyecatcher
   {
-  	\includegraphics[width=0.14\linewidth]{double-lily-modified3.png}
+  	\includegraphics[width=0.11\linewidth]{double-lily-modified3.png}
   }
 % title
   {Lilypond}
 % author
-  {Jan-Peter Voigt}
+  {}
 % university
-  {\includegraphics[width=.14\textwidth]{double-lily-modified3.png}}
+  {\includegraphics[width=.11\textwidth]{double-lily-modified3.png}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Content
 
-  \headerbox{Lilypond Usage}{name=lily1,column=0,span=2}{
+  \headerbox{Text input}{name=text,column=0,span=1}{
+LilyPond is a compiled system: it is run on a text file describing the music. The resulting output is viewed on-screen or printed. In some ways, LilyPond is more similar to a programming language than graphical score editing software.
+
+You do not write music by dragging notes from a graphical toolbar and placing them on a dynamically refreshing score; you write music by typing text. This text is interpreted (or “compiled”) by LilyPond, which produces beautifully engraved sheet music.
+
+People accustomed to graphical user interfaces might need to learn a new way of working, but the results are definitely worth it! 
   }
-  \headerbox{Classical Music}{name=marco,column=1,span=2,below=lily1}{
-  	St.Mark Passion, Johann Sebastian Bach
+
+  \headerbox{Classical music}{name=classical,column=1,span=1}{
+  	Excerpts from the Markus Passion by J.S.Bach (BWV 247)
   	
+	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
+  	
+	{\scriptsize © 2016 Ortus Musik Verlag, Berlin $\bullet$
+	\emph{The excerpts are reproduced with the kind permission of the publisher.}}
   }
   
-  \headerbox{Contempory Music}{name=keller,column=3,span=2}{
+  \headerbox{Contempory music}{name=keller,column=3,span=1}{
 	Excerpts from Hermann Keller's composition for speaking cellist\\
 	"Ihr sollt die Wahrheit erben"
 	
-    \includegraphics[width=.5\textwidth]{wahrheit1}
-    \includegraphics[width=.5\textwidth]{wahrheit2}
+    %\includegraphics[width=.5\textwidth]{wahrheit1}
+    \includegraphics[width=\textwidth]{wahrheit2}
 	    
 	{\scriptsize © 2019 Edition Juliane Klein, Berlin $\bullet$
 	\emph{The excerpts are reproduced with the kind permission of the publisher.}}
     }
-  \headerbox{}{column=0,span=5,below=keller}{
+  \headerbox{}{column=0,span=5,row=.885}{
   	\includegraphics[width=\textwidth]{salzburg-poster.pdf}
+  	{\scriptsize Excerpt from the piano reduction of St.Mark Passion by J.S.Bach} (BWV\,247).
   }
 
 \end{poster}
