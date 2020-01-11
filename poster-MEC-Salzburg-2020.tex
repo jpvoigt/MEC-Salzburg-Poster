@@ -86,8 +86,17 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 	
 }
 
-  \headerbox{Classical Music}{name=classical,column=1,span=1}{
-  	Excerpt from the Markus Passion by J.S.Bach (BWV 247)
+\headerbox{Note Entry}{name=figures,column=1,span=1,boxpadding=12pt}{
+	It is easy to add a figured bass.\vspace{1em}
+	
+	\texttt{<7\textbackslash+ 4 2>8 <8> <7!>}\vspace{1em}
+
+    \lilypondfile{lily/figured-bass.ly}
+
+}
+
+  \headerbox{Classical Music}{name=classical,column=1,span=1,below=figures}{
+  	Excerpt from the Markus Passion by Johann Sebastian Bach (BWV 247)
   	
 	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
   	
@@ -95,7 +104,7 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 	\emph{The excerpt is reproduced with the kind permission of the publisher.}}
   }
   
-  \headerbox{Contemporary Music}{name=classical,column=2,span=1}{
+  \headerbox{Contemporary Music}{name=classical,column=3,span=1}{
 	Excerpt from "All things rush on" by Kieren McMillan
 	
 	\includegraphics[width=\textwidth]{AllThingsRushOn_pg13.pdf}
@@ -104,7 +113,7 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 		\emph{The excerpt is reproduced with the kind permission of the publisher.}}
 }
 
-  \headerbox{Contemporary Music}{name=keller,column=3,span=1}{
+  \headerbox{Contemporary Music}{name=keller,column=4,span=1}{
 	Excerpt from Hermann Keller's composition for speaking cellist\\
 	"Ihr sollt die Wahrheit erben"
 	
@@ -116,7 +125,6 @@ People accustomed to graphical user interfaces might need to learn a new way of 
     }
   \headerbox{}{column=0,span=5,row=.885}{
   	\includegraphics[width=\textwidth]{salzburg-poster.pdf}
-  	{\scriptsize Excerpt from the piano reduction of St.Mark Passion by J.S.Bach} (BWV\,247).
   }
 
 \end{poster}
