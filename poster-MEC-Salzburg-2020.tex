@@ -10,6 +10,9 @@
 
 \usepackage{setspace}
 
+\usepackage{fancyvrb}
+
+% TODO change this
 \usepackage[program=/home/jpv/lily2.20/bin/lilypond]{lyluatex}
 
 \definecolor{lilyLightHeader1}{RGB}{212,242,201}
@@ -63,7 +66,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% Content
 
-  \headerbox{Text input}{name=text,column=0,span=1}{
+  \headerbox{Text Input}{name=text,column=0,span=1,boxpadding=12pt}{
 LilyPond is a compiled system: it is run on a text file describing the music. The resulting output is viewed on-screen or printed. In some ways, LilyPond is more similar to a programming language than graphical score editing software.
 
 You do not write music by dragging notes from a graphical toolbar and placing them on a dynamically refreshing score; you write music by typing text. This text is interpreted (or “compiled”) by LilyPond, which produces beautifully engraved sheet music.
@@ -71,7 +74,19 @@ You do not write music by dragging notes from a graphical toolbar and placing th
 People accustomed to graphical user interfaces might need to learn a new way of working, but the results are definitely worth it! 
   }
 
-  \headerbox{Classical music}{name=classical,column=1,span=1}{
+\headerbox{Note Entry}{name=text,column=0,span=1,boxpadding=12pt,below=text}{
+	Note entry is as easy as typing the note name and the duration.
+	
+	\VerbatimInput{lily/note-entry.ly}
+	
+	\lilypondfile{lily/note-entry.ly}
+	
+	Just type the note name \texttt{c, d, e, f, g, a, b}, append \texttt{is} for sharp and \texttt{es} for flat tones and add the duration with 4 for fourth, 8 for eigth and so on. With one or more dots you
+	create dotted notes.
+	
+}
+
+  \headerbox{Classical Music}{name=classical,column=1,span=1}{
   	Excerpt from the Markus Passion by J.S.Bach (BWV 247)
   	
 	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
@@ -80,7 +95,16 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 	\emph{The excerpt is reproduced with the kind permission of the publisher.}}
   }
   
-  \headerbox{Contempory music}{name=keller,column=3,span=1}{
+  \headerbox{Contemporary Music}{name=classical,column=2,span=1}{
+	Excerpt from "All things rush on" by Kieren McMillan
+	
+	\includegraphics[width=\textwidth]{AllThingsRushOn_pg13.pdf}
+	
+	{\scriptsize © 2019 Kieren McMillan $\bullet$
+		\emph{The excerpt is reproduced with the kind permission of the publisher.}}
+}
+
+  \headerbox{Contemporary Music}{name=keller,column=3,span=1}{
 	Excerpt from Hermann Keller's composition for speaking cellist\\
 	"Ihr sollt die Wahrheit erben"
 	
