@@ -68,11 +68,16 @@
 %%% Content
 
   \headerbox{Text Input}{name=text,column=0,span=1,boxpadding=12pt}{
-LilyPond is a compiled system: it is run on a text file describing the music. The resulting output is viewed on-screen or printed. In some ways, LilyPond is more similar to a programming language than graphical score editing software.
+LilyPond is a text based system; the input is a text file describing the music, as opposed to a
+“What You See Is What You Get” graphical application where you might drag notes from a toolbar onto
+your on-screen score. In this way, LilyPond shares many similarities with programming and script
+languages: The text input is interpreted (or “compiled”) by LilyPond  which produces typeset music.
+\\
 
-You do not write music by dragging notes from a graphical toolbar and placing them on a dynamically refreshing score; you write music by typing text. This text is interpreted (or “compiled”) by LilyPond, which produces beautifully engraved sheet music.
-
-People accustomed to graphical user interfaces might need to learn a new way of working, but the results are definitely worth it!
+This might seem old-fashioned, or even clumsy, but it is in fact surprisingly easy to start using
+LilyPond  and the results you will get are both predictable and beautiful. People accustomed to
+graphical user interfaces will need to learn a new way of working, but the results are definitely
+worth it!
   }
 
 \headerbox{Basic Note Entry}{name=text,column=0,span=1,boxpadding=12pt,below=text}{
@@ -99,7 +104,7 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 	immediately after each number.
 }
 
-\headerbox{Note Entry}{name=chords,column=1,span=1,boxpadding=12pt,below=figures}{
+\headerbox{Chord Entry}{name=chords,column=1,span=1,boxpadding=12pt,below=figures}{
 	It is easy to write out chords.\vspace{1em}
 
 	\texttt{\textbackslash chordmode \\ \{ d4:m7 g c2:maj7 \}}
