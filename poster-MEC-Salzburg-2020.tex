@@ -116,6 +116,23 @@ worth it!
 	\lilypondfile{lily/chords.ly}
 }
 
+\headerbox{Note Entry}{name=variables,column=1,span=1,boxpadding=12pt,below=chords}{
+	A powerful feature of LilyPond, is variables. Write once, then choose how you want to
+	display the music! For example, here's a short polyphonic sequence:
+	\vspace{1em}
+	\texttt{myMusic = \{ <c' e' g'> \}}
+	\vspace{1em}
+	Then, we'll display this as chord names, as notes, and as guitar tablature, simply by
+	referencing the variable:
+	\vspace{1em}
+	\texttt{
+	\textbackslash new ChordNames \textbackslash myMusic\\
+	\textbackslash new Staff \textbackslash myMusic\\
+	\textbackslash new Tablature \textbackslash myMusic\\
+	}
+	\lilypondfile{lily/variables.ly}
+}
+
   \headerbox{Classical Music}{name=classical,column=2,span=1}{
   	Excerpt from the Markus Passion by Johann Sebastian Bach (BWV 247)
 
