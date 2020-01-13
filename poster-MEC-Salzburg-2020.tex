@@ -96,7 +96,19 @@ People accustomed to graphical user interfaces might need to learn a new way of 
 
 }
 
-  \headerbox{Classical Music}{name=classical,column=1,span=1,below=figures}{
+\headerbox{Note Entry}{name=chords,column=1,span=1,boxpadding=12pt,below=figures}{
+	It is easy to write out chords.\vspace{1em}
+
+	\texttt{\textbackslash chordmode \\ \{ d4:m7 g c2:maj7 \}}
+	\vspace{1em}
+
+	First, specify the root note, then add the duration. Any modifiers can be added by
+	appending `:', followed by a list of the modifiers.
+
+	\lilypondfile{lily/chords.ly}
+}
+
+  \headerbox{Classical Music}{name=classical,column=2,span=1}{
   	Excerpt from the Markus Passion by Johann Sebastian Bach (BWV 247)
 
 	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
