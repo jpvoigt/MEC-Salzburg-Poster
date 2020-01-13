@@ -45,7 +45,7 @@
 	headerborder=closed,
 	headerheight=0.1\textheight,
     % textfont=\sc, % An example of changing the text font
-	headershape=rounded,
+	headershape=smallrounded,
 	headershade=shadetb,
     % headerfont=\Large\bf\textsc, %Sans Serif
     % textfont={\setlength{\parindent}{1.5em}},
@@ -61,7 +61,7 @@
 % title
   {GNU LilyPond}
 % author
-  {}
+  {http://lilypond.org/}
 % university
   {\includegraphics[width=.11\textwidth]{double-lily-modified3.png}}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -80,7 +80,7 @@ graphical user interfaces will need to learn a new way of working, but the resul
 worth it!
   }
 
-\headerbox{Basic Note Entry}{name=text,column=0,span=1,boxpadding=12pt,below=text}{
+\headerbox{Basic Note Entry}{name=note-entry,column=1,span=1,boxpadding=12pt}{
 	Note entry is as easy as typing the note name and the duration.
 
 	\VerbatimInput{lily/note-entry.ly}
@@ -94,7 +94,7 @@ worth it!
 
 }
 
-\headerbox{Figured Bass Entry}{name=figures,column=1,span=1,boxpadding=12pt}{
+\headerbox{Figured Bass Entry}{name=figures,column=1,span=1,boxpadding=12pt,row=.48}{
 	It is easy to add a figured bass.\vspace{1em}
 
 	\texttt{<7\textbackslash+ 4 2>8 <8> <7!>}\vspace{1em}
@@ -106,7 +106,7 @@ worth it!
 	immediately after each number.
 }
 
-\headerbox{Chord Entry}{name=chords,column=1,span=1,boxpadding=12pt,below=figures}{
+\headerbox{Chord Entry}{name=chords,column=0,span=1,boxpadding=12pt,below=text}{
 	It is easy to write out chords.\vspace{1em}
 
 	\texttt{\textbackslash chordmode \\ \{ d4:m7 g c2:maj7 \}}
@@ -118,7 +118,32 @@ worth it!
 	\lilypondfile{lily/chords.ly}
 }
 
-  \headerbox{Classical Music}{name=classical,column=2,span=1}{
+\headerbox{Variables}{name=variables,column=2,span=2,boxpadding=12pt}{
+	\begin{minipage}{.7\textwidth}
+	A powerful feature of LilyPond, is variables. Write once, then choose how you want to
+	display the music! For example, here's a short polyphonic sequence:
+	\vspace{.5em}
+
+	\texttt{myMusic = \{ <c' e' g'> \}}
+	\vspace{1em}
+
+	Then, we'll display this as chord names, as notes, and as guitar tablature, simply by
+	referencing the variable:
+	%\vspace{.1em}
+	
+	\texttt{\noindent
+	\textbackslash new ChordNames \textbackslash myMusic\\
+	\textbackslash new FretBoards \textbackslash myMusic\\
+	\textbackslash new Staff \textbackslash myMusic\\
+	\textbackslash new Tablature \textbackslash myMusic\\
+	}
+	\end{minipage}\hfill
+	\begin{minipage}{.18\textwidth}
+	\lilypondfile{lily/variables.ly}
+	\end{minipage}
+}
+
+  \headerbox{Classical Music}{name=classical,column=2,span=1,row=.3}{
   	Excerpt from the Markus Passion by Johann Sebastian Bach (BWV 247)
 
 	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
@@ -127,7 +152,7 @@ worth it!
 	\emph{The excerpt is reproduced with the kind permission of the publisher.}}
   }
 
-  \headerbox{Contemporary Music}{name=classical,column=3,span=1}{
+  \headerbox{Contemporary Music}{name=rushon,column=3,span=1,aligned=classical}{
 	Excerpt from “All Things Rush On” by Kieren MacMillan
 
 	\includegraphics[width=\textwidth]{AllThingsRushOn_pg13.pdf}
@@ -136,7 +161,7 @@ worth it!
 		\emph{The excerpt is reproduced with the kind permission of the publisher.}}
 }
 
-  \headerbox{Contemporary Music}{name=keller,column=4,span=1}{
+  \headerbox{Contemporary Music}{name=keller,column=4,span=1,aligned=rushon}{
 	Excerpt from Hermann Keller's composition for speaking cellist\\
 	“Ihr sollt die Wahrheit erben”
 
@@ -148,6 +173,8 @@ worth it!
     }
   \headerbox{}{column=0,span=5,row=.885}{
   	\includegraphics[width=\textwidth]{salzburg-poster.pdf}
+  	
+  	\hfill \small Poster created by Jan-Peter Voigt, Erlend Aasland, Urs Liska
   }
 
 \end{poster}
