@@ -80,7 +80,7 @@ graphical user interfaces will need to learn a new way of working, but the resul
 worth it!
   }
 
-\headerbox{Note Entry}{name=text,column=0,span=1,boxpadding=12pt,below=text}{
+\headerbox{Basic Note Entry}{name=text,column=0,span=1,boxpadding=12pt,below=text}{
 	Note entry is as easy as typing the note name and the duration.
 
 	\VerbatimInput{lily/note-entry.ly}
@@ -88,20 +88,35 @@ worth it!
 	\lilypondfile{lily/note-entry.ly}
 
 	Just type the note name \texttt{c, d, e, f, g, a, b}, append \texttt{is} for sharp and \texttt{es} for flat tones and add the duration with 4 for fourth, 8 for eigth and so on. With one or more dots you
-	create dotted notes.
+	create dotted notes. Pitch is specified using a variant of the Helmholtz pitch notation.
 
 }
 
-\headerbox{Note Entry}{name=figures,column=1,span=1,boxpadding=12pt}{
+\headerbox{Figured Bass Entry}{name=figures,column=1,span=1,boxpadding=12pt}{
 	It is easy to add a figured bass.\vspace{1em}
 
 	\texttt{<7\textbackslash+ 4 2>8 <8> <7!>}\vspace{1em}
 
     \lilypondfile{lily/figured-bass.ly}
 
+	A group of bass figures is delimited by `<' and `>', with the duration immediately appended.
+	Accidentals are entered by appending `+' for sharps, `-' for flats, or `!' for naturals,
+	immediately after each number.
 }
 
-  \headerbox{Classical Music}{name=classical,column=1,span=1,below=figures}{
+\headerbox{Note Entry}{name=chords,column=1,span=1,boxpadding=12pt,below=figures}{
+	It is easy to write out chords.\vspace{1em}
+
+	\texttt{\textbackslash chordmode \\ \{ d4:m7 g c2:maj7 \}}
+	\vspace{1em}
+
+	First, specify the root note, then add the duration. Any modifiers can be added by
+	appending `:', followed by a list of the modifiers.
+
+	\lilypondfile{lily/chords.ly}
+}
+
+  \headerbox{Classical Music}{name=classical,column=2,span=1}{
   	Excerpt from the Markus Passion by Johann Sebastian Bach (BWV 247)
 
 	\includegraphics[width=\textwidth]{bwv247-partitur1.pdf}
@@ -121,7 +136,7 @@ worth it!
 
   \headerbox{Contemporary Music}{name=keller,column=4,span=1}{
 	Excerpt from Hermann Keller's composition for speaking cellist\\
-	»Ihr sollt die Wahrheit erben«
+	“Ihr sollt die Wahrheit erben”
 
     %\includegraphics[width=.5\textwidth]{keller-wahrheit1}
     \includegraphics[width=\textwidth]{keller-wahrheit2}
